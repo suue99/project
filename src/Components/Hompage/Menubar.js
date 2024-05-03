@@ -7,16 +7,17 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Menubar() {
     return (
-
-        <Navbar expand="lg" bg='dark' variant='dark'>
+        <Navbar collapseOnSelect expand="lg" bg='dark' variant='dark' >
 
           <Container fluid>
           <Navbar.Brand> <Link className={`links`} to = "/home">JOINTLY+ </Link></Navbar.Brand>
           
-             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
+             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
+
+        <Container className = 'justify-content-end '>
          
-               <Nav className="ml-auto" activeKey="/home">
+               <Nav className="me-auto " activeKey="/home">
              
                   <Nav.Link as = {Link} to = "/" > <span className='option'>Home</span>  </Nav.Link>
                   
@@ -44,10 +45,11 @@ function Menubar() {
                   </NavDropdown> 
             
                </Nav>
+               </Container>
             </Navbar.Collapse>
           </Container>
         </Navbar>
-      
+       
        
     );
   }

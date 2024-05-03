@@ -1,11 +1,11 @@
 @font-face {
     font-family: Asap;
-    src: url("./Fonts/AsapCondensed-Black.ttf");
+    src: url("./Fonts/AsapCondensed-Regular.ttf");
 
 }
 
 *{
-    font-family: Asap;
+  font-family: Asap;
      
 }
 
@@ -16,6 +16,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+ 
     
   } 
 
@@ -28,3 +29,83 @@ body {
     color: white;
   }
 
+  .login-option{
+    text-decoration: none;
+    color: green;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns, each taking up half the width */
+      gap: 20px;
+    
+    }
+
+  .faq-container-one{
+   grid-column: 1;
+
+  }
+  .jointly-faq{
+      color: white;
+      font-weight: 600;
+      padding: 10px;
+      font-size: 50px;
+      margin-left: 20px;
+      
+  }
+
+  .empower{
+    color: white;
+      margin-top: 5px;
+      padding: 4px;
+      margin-left: 20px;
+      font-size: 30px;
+      text-align: left;
+
+
+  }
+
+  .paragraph-faq{
+    color: aqua;
+    font-size: 20px;
+    
+  }
+
+  .faq-container-two{
+  grid-column: 2;
+  grid-row: third-line
+    
+  }
+
+  .heading-two{
+    color: white;
+    font-size: 40px;
+    font-weight: 600 ;    
+   
+  }
+
+  .targeted{
+    margin-top: -20px;
+    color: aquamarine;
+  
+  }
+
+
+
+
+
+
+  
+
+  @media only screen and (max-width: 770px) {
+    .container {
+      display: flex;
+     flex-direction: column;
+      
+      }
+
+      .jointly-faq{
+       
+        font-size: 30px;
+      }
+  }

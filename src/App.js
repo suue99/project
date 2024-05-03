@@ -4,13 +4,13 @@ import React from 'react';
 import Menubar from "./Components/Hompage/Menubar";
 import { BrowserRouter, Route ,Routes } from 'react-router-dom';
 import Home from './Components/Hompage/Home';
-import About from './Components/AboutPage/About';
 import Profile from './Components/ProfilePage/Profile';
 import Exercise from './Components/ExercisePage/Exercise';
 import Chat from './Components/ChatPage/Chat';
 import Faq from './Components/AboutPage/Faq';
 import Signup from './Components/ProfilePage/Signup';
 import Login from './Components/ProfilePage/Login';
+import Footer from './Components/Hompage/Footer';
 
 
 
@@ -23,8 +23,7 @@ function App() {
     <Routes>
       
       <Route path = "/" element = {<Home />} />
-      <Route path = "/About Us" element = {<About />} />
-      <Route path = "/Faqs" element = {<Faq />} />
+      <Route path = "/Faq" element = {<Faq />} />
       <Route path = "/Profile" element = {<Profile />} />
       <Route path = "/Exercise" element = {<Exercise />} />
       <Route path = "/Chat" element = {<Chat />} />
@@ -34,7 +33,7 @@ function App() {
     </Routes>
     </BrowserRouter>
      
-     
+     <Footer/>
      </div>
     
   );
