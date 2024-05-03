@@ -1,4 +1,7 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom'
+import { Form } from 'react-bootstrap';
+
 import {
   MDBBtn,
   MDBContainer,
@@ -8,13 +11,14 @@ import {
   MDBCol,
   MDBInput,
   MDBCheckbox,
-  MDBValidation,
-  MDBValidationItem
+ 
+  MDBValidationItem,
 }
 from 'mdb-react-ui-kit';
 
+
 function Signup() {
-  const [ fieldValue, setFieldValue] = useState({
+  const [fieldValue, setFieldValue] = useState({
     firstname: '',
     lastname: '',
     email: '',
@@ -53,109 +57,92 @@ function Signup() {
     return password.length >= 6 && uppercaseRegex.test(password) && specialCharRegex.test(password);
   };
 
+  const navigate = useNavigate();
 
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    navigate('/', { state: { welcomeMessage: `Hello, ${fieldValue.firstname}` } });
+  };
 
   return (
     <MDBContainer fluid className='p-4'>
-
       <MDBRow>
-
         <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
-
           <h1 className="my-5 display-3 fw-bold ls-tight px-3">
             The best offer <br />
             <span className="text-primary">for your business</span>
           </h1>
-
           <p className='px-3' style={{color: 'hsl(217, 10%, 50.8%)'}}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Eveniet, itaque accusantium odio, soluta, corrupti aliquam
             quibusdam tempora at cupiditate quis eum maiores libero
             veritatis? Dicta facilis sint aliquid ipsum atque?
           </p>
-
         </MDBCol>
-
-      <MDBValidation>
         <MDBCol md='6'>
-
           <MDBCard className='my-5'>
             <MDBCardBody className='p-5'>
-
-              <MDBRow>
-               <MDBValidationItem>
-                <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' 
-                  value={fieldValue.firstname}
-                  name='firstname'
-                  onChange={onChange}
-                  id='form1'
+              <Form onSubmit={handleSubmit}>
+                <MDBRow>
+                  <MDBCol col='6'>
+                    <MDBInput wrapperClass='mb-4' 
+                      value={fieldValue.firstname}
+                      name='firstname'
+                      onChange={onChange}
+                      id='firstnameInput'
+                      required
+                      label='First name'
+                      type='text'
+                    />
+                  </MDBCol>
+                  <MDBCol col='6'>
+                    <MDBInput wrapperClass='mb-4' 
+                      value={fieldValue.lastname}
+                      name='lastname'
+                      onChange={onChange}
+                      id='lastnameInput'
+                      required
+                      label='Last name'
+                      type='text'
+                    />
+                  </MDBCol>
+                </MDBRow>
+                <MDBInput wrapperClass='mb-4'
+                  label='Email'
+                  id='emailInput'
+                  type='email'
+                  value={email}
                   required
-                  label='First name'
-                  type='text'/>
-                </MDBCol>
-                </MDBValidationItem>
-
-                <MDBValidationItem>
-                <MDBCol col='6'>
-                <MDBInput wrapperClass='mb-4' 
-                  value={fieldValue.lastname}
-                  name='lastname'
-                  onChange={onChange}
-                  id='form2'
+                  onChange={handleChange}
+                  className={!isValidEmail ? 'is-invalid' : ''}
+                />
+                {!isValidEmail && (
+                  <div className='invalid-feedback'>Please enter a valid email address.</div>
+                )}
+                
+                <MDBInput wrapperClass='mb-4'
+                  label='Password'
+                  id='passwordInput'
+                  type='password'
                   required
-                  label='Last name'
-                  type='text'/>
-                </MDBCol>
+                  value={password}
+                  onChange={manageChange}
+                  className={!isValidPassword ? 'is-invalid' : ''}
+                />
+                {!isValidPassword && (
+                  <div className='invalid-feedback'>Password must be at least 6 characters long and contain at least one uppercase letter and one special character.</div>
+                )}
+                <MDBValidationItem className='col-12' feedback='You must agree before submitting.' invalid>
+                  <MDBCheckbox label='Agree to terms and conditions' id='invalidCheck' required />
                 </MDBValidationItem>
-              </MDBRow>
-
-              <MDBValidationItem>
-              <MDBInput wrapperClass='mb-4'
-               label='Email'
-               id='form3'
-               type='email'
-               value={email}
-               onChange={handleChange}
-               className={!isValidEmail ? 'is-invalid' : ''}  />
-
-               {!isValidEmail && (
-                <div className='invalid-feedback'>Please enter a valid email address.</div>
-               )}
-
-              </MDBValidationItem>
-
-              <MDBValidationItem>
-              <MDBInput wrapperClass='mb-4'
-              label='Password'
-              id='form1'
-              type='password'
-              value={password}
-              onChange={manageChange}
-              className={!isValidPassword ? 'is-invalid' : ''} // Add 'is-invalid' class if password is not valid
-            />
-            {!isValidPassword && (
-              <div className='invalid-feedback'>Password must be at least 6 characters long and contain at least one uppercase letter and one special character.</div>
-            )}
-              </MDBValidationItem>
-
-              <MDBValidationItem className='col-12' feedback='You must agree before submitting.' invalid>
-                    <MDBCheckbox label='Agree to terms and conditions' id='invalidCheck' required />
-               </MDBValidationItem>
-
-               <MDBValidationItem className='col-12' invalid={!isValidEmail || !isValidPassword}>
-                  <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
-              </MDBValidationItem>
-
-              
+                <MDBValidationItem className='col-12' invalid={!isValidEmail || !isValidPassword}>
+                  <MDBBtn className='w-100 mb-4' size='md' type='submit'>sign up</MDBBtn>
+                </MDBValidationItem>
+              </Form>
             </MDBCardBody>
-           </MDBCard>
-
-          </MDBCol>
-        </MDBValidation>
-
+          </MDBCard>
+        </MDBCol>
       </MDBRow>
-
     </MDBContainer>
   );
 }

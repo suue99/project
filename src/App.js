@@ -13,7 +13,6 @@ import Login from './Components/ProfilePage/Login';
 import Footer from './Components/Hompage/Footer';
 
 
-
 function App() {
   return (
     <div>
