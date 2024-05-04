@@ -63,7 +63,7 @@ function Signup() {
     e.preventDefault(); 
     navigate('/', { state: { welcomeMessage: `Hello, ${fieldValue.firstname}` } });
   };
-
+ 
   return (
     <MDBContainer fluid className='p-4'>
       <MDBRow>
@@ -119,7 +119,7 @@ function Signup() {
                 {!isValidEmail && (
                   <div className='invalid-feedback'>Please enter a valid email address.</div>
                 )}
-                
+
                 <MDBInput wrapperClass='mb-4'
                   label='Password'
                   id='passwordInput'
