@@ -124,7 +124,7 @@ body {
     font-family: Geologica;
     font-size: 15px;
     margin-top: 50px;
-    color: rgb(230, 216, 199);
+    color: white;
  
   }
 
@@ -215,11 +215,13 @@ body {
       }
 
       .subcontainer-1 {
+
        text-align: center;
+       margin-top: 15px;
        
       }
       .subcontainer-2 {
-       margin-top: 40px;
+       margin-top: 30px;
        text-align: center;
       
       }
