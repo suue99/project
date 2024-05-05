@@ -10,7 +10,7 @@ function Menubar() {
         <Navbar collapseOnSelect expand="lg" bg='dark' variant='dark' >
 
           <Container fluid>
-          <Navbar.Brand> <Link className={`links`} to = "/home">JOINTLY+ </Link></Navbar.Brand>
+          <Navbar.Brand> <Link className={`links`} to = "/">JOINTLY+ </Link></Navbar.Brand>
           
              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
@@ -21,7 +21,7 @@ function Menubar() {
              
                   <Nav.Link as = {Link} to = "/" > <span className='option'>Home</span>  </Nav.Link>
                   
-                  <NavDropdown title="About Us" id="basic-nav-dropdown" menuVariant="dark">
+                  <NavDropdown className="about" title="About Us" id="basic-nav-dropdown" menuVariant="dark">
                   <NavDropdown.Item>
                     <Nav.Link as = {Link} to  = "/Faq"> <span className='option'>FAQ's</span> </Nav.Link>
                     </NavDropdown.Item>  
