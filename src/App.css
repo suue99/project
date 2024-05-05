@@ -8,6 +8,11 @@
   src: url("./Fonts/Geologica-Bold.ttf");
 }
 
+@font-face {
+  font-family: Cursive-light;
+  src: url("./Fonts/Sacramento-Regular.ttf");
+}
+
 *{
   font-family: Asap;
      
@@ -101,9 +106,10 @@ body {
 
   /*Homepage styling*/
   .hi{
-    font-size: 20px;
-    color: rgb(208, 127, 255);
+    font-size: 25px;
+    color: rgb(245, 234, 83);
     text-align: left;
+    font-family:Cursive-light;
   }
   
   .jointly-text{
