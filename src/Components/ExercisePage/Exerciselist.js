@@ -40,17 +40,17 @@ function ExerciseList() {
 
     return (
      
-            <div> {/* You might want a more specific container here */}
-                <div className="exercise-list"> {/* Add the class for grid styles */}
+            <div>
+                <div className="exercise-list"> 
                     {exercises.map((exercise) => (
                         <article key={exercise.slug ? exercise.slug.current : exercise.title} className="exercise-item"> 
                             {exercise.media && (
                                 <img src={exercise.media.asset.url} alt={exercise.media.alt || exercise.title} />
                             )}
                             <h3>{exercise.title}</h3> 
-                            {/* ... Add description or other fields as desired ... */}
+                           
                             {exercise.slug && (
-                                <Link to={`/exercise/${exercise.slug.current}`}>More details</Link>
+                                <Link className="xlink" to={`/exercise/${exercise.slug.current}`}>More details</Link>
                             )}
                         </article>
                     ))}
