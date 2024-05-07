@@ -29,7 +29,7 @@ function Menubar() {
                 
                   
                   
-                  <Nav.Link as = {Link} to  =  "/Exercise" > <span className='option'>Exercise Library</span> </Nav.Link>
+                  <Nav.Link as = {Link} to  =  "/list" > <span className='option'>Exercise Library</span> </Nav.Link>
                  
                   
                   

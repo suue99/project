@@ -5,7 +5,8 @@ import Menubar from "./Components/Hompage/Menubar";
 import { BrowserRouter, Route ,Routes } from 'react-router-dom';
 import Home from './Components/Hompage/Home';
 import Profile from './Components/ProfilePage/Profile';
-import Exercise from './Components/ExercisePage/Exercise';
+import ExerciseDetail from './Components/ExercisePage/Exercisedetail';
+import ExerciseList from './Components/ExercisePage/Exerciselist';
 import Chat from './Components/ChatPage/Chat';
 import Faq from './Components/AboutPage/Faq';
 import Signup from './Components/ProfilePage/Signup';
@@ -24,10 +25,11 @@ function App() {
       <Route path = "/" element = {<Home />} />
       <Route path = "/Faq" element = {<Faq />} />
       <Route path = "/Profile" element = {<Profile />} />
-      <Route path = "/Exercise" element = {<Exercise />} />
       <Route path = "/Chat" element = {<Chat />} />
       <Route path = "/Signup" element = {<Signup />} />
       <Route path = "/Login" element = {<Login />} />
+      <Route path="/list" element={<ExerciseList />}  />
+      <Route path="/exercise/:exerciseSlug" element={<ExerciseDetail />}/>
 
     </Routes>
     </BrowserRouter>
