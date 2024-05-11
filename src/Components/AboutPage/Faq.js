@@ -9,7 +9,7 @@ function Faq () {
     <div>
         <Container>
         <span className="faq-container-one" >
-           <h2 className="jointly-faq" > Jointly+ </h2>
+          
             <h4 className="empower">Empowering Young Adults with Osteoarthritis</h4> 
            
 
@@ -22,18 +22,20 @@ function Faq () {
         </span>
         <span className="faq-container-two">
             <h4 className="heading-two p-4">
-            Jointly+ is the result of extensive research into the gaps faced by young adults with OA. We offer:
+            Jointly+ is the result of extensive research into the gaps faced by young adults with OA. <h4 className="offer">We offer:</h4>
             </h4>
 
             <section className="targeted p-4" >
                 Targeted Exercises: A curated library of exercises tailored to your age, fitness level, and specific pain areas.
+               <br/>
+               <br/>
                 Expert Physio Support: Get answers, personalized advice, and motivation through our live physiotherapist chat.
             </section>
         
         </span>
         </Container>
         
-        <Accordion className="mt-3 p-4" flush>
+        <Accordion className="mt-3 p-4 " flush>
           <Accordion.Item eventKey="0">
             <Accordion.Header>FAQ 1</Accordion.Header>
             <Accordion.Body>

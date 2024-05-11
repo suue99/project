@@ -1,0 +1,60 @@
+
+
+
+.chat-container {
+    width: 370px;
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: hwb(177 62% 9%);
+    border: 1px solid #9ee9e5; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.chat-container .physio-message {
+    background-color: #daeeda;
+    text-align: left;
+}
+
+.chatroom{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.chat-container ul {
+    list-style-type: none; 
+    padding: 0;
+    height: 250px;        
+    overflow-y: auto;    
+}
+
+.chat-container li {
+    
+        padding: 10px 15px;
+        margin: 5px 0; 
+        border-radius: 10px; 
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        max-width: 90%; 
+
+}
+
+.chat-container form {
+    display: flex; 
+}
+
+.chat-container input[type="text"] {
+    flex: 1; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.chat-container button {
+    margin-left: 10px; 
+    padding: 8px 15px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

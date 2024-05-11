@@ -60,28 +60,26 @@ body {
    grid-column: 1;
 
   }
-  .jointly-faq{
-      color: white;
-      font-weight: 600;
-      padding: 10px;
-      font-size: 50px;
-      margin-left: 20px;
-      
-  }
 
   .empower{
     color: white;
-      margin-top: 5px;
+      margin-top: 40px;
       padding: 4px;
       margin-left: 20px;
       font-size: 30px;
       text-align: left;
+      font-weight: 600;
 
 
   }
 
+  .offer{
+    font-size: 32px;
+    margin-top: 30px;
+  }
+
   .paragraph-faq{
-    color: aqua;
+    color: white;
     font-size: 20px;
     
   }
@@ -94,9 +92,15 @@ body {
 
   .heading-two{
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600 ;    
    
+  }
+
+  .targeted {
+    color: white;
+    margin-top: -30px;
+    font-size: 20px;
   }
 
 
@@ -113,7 +117,7 @@ body {
   .jointly-text{
     color: white;
     font-size: 33px;
-    font-family: Geologica;
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 80px;
   } 
 

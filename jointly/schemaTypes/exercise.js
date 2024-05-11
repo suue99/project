@@ -5,6 +5,11 @@ export default {
     fields: [
       { name: 'title', type: 'string', title: 'Title' },
       { name: 'description', type: 'text', title: 'Description' },
+      
+      { name: 'slug', type: 'slug', title: 'Slug', 
+       options: { source: 'title' } 
+      },
+
       {
         name: 'joint',
         type: 'string',
@@ -23,6 +28,7 @@ export default {
       },
       { name: 'instructions', type: 'array', of: [{type: 'block' }], title: 'Instructions' },
       { name: 'media', type: 'image', title: 'Image' },
+   
     ]
   }
  
