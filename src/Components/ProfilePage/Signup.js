@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../Firebase';
 import { Form } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 import {
   MDBBtn,
   MDBContainer,
@@ -10,20 +12,14 @@ import {
   MDBRow,
   MDBCol,
   MDBInput,
-  MDBCheckbox,
- 
-  MDBValidationItem,
-}
-from 'mdb-react-ui-kit';
+} from 'mdb-react-ui-kit';
 
+const Signup = () => {
+  const navigate = useNavigate();
 
-function Signup() {
   const [fieldValue, setFieldValue] = useState({
     firstname: '',
     lastname: '',
-    email: '',
-    password: '',
-    confirm: '',
   });
 
   const onChange = (e) => {
@@ -31,39 +27,25 @@ function Signup() {
   };
 
   const [email, setEmail] = useState('');
-  const [isValidEmail, setIsValidEmail] = useState(true); 
-
-  const handleChange = (e) => {
-    setEmail(e.target.value);
-    setIsValidEmail(checkEmail(e.target.value));
-  };
-
-  const checkEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
   const [password, setPassword] = useState('');
-  const [isValidPassword, setIsValidPassword] = useState(true);
 
-  const manageChange = (e) => {
-    setPassword(e.target.value);
-    setIsValidPassword(checkPassword(e.target.value));
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      // Successfully signed up
+      const user = userCredential.user;
+      console.log(user);
+      navigate('/', { state: { welcomeMessage: `Hello, ${fieldValue.firstname}` } });
+    } catch (error) {
+      
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error(errorCode, errorMessage);
+    }
   };
 
-  const checkPassword = (password) => {
-    const uppercaseRegex = /[A-Z]/;
-    const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
-    return password.length >= 6 && uppercaseRegex.test(password) && specialCharRegex.test(password);
-  };
-
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.preventDefault(); 
-    navigate('/', { state: { welcomeMessage: `Hello, ${fieldValue.firstname}` } });
-  };
- 
   return (
     <MDBContainer fluid className='p-4'>
       <MDBRow>
@@ -72,12 +54,7 @@ function Signup() {
             One step closer <br />
             <span className="text-primary">to a better life</span>
           </h1>
-          <p className='px-3' style={{color: 'hsl(217, 10%, 50.8%)'}}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-            quibusdam tempora at cupiditate quis eum maiores libero
-            veritatis? Dicta facilis sint aliquid ipsum atque?
-          </p>
+          
         </MDBCol>
         <MDBCol md='6'>
           <MDBCard className='my-5'>
@@ -113,12 +90,8 @@ function Signup() {
                   type='email'
                   value={email}
                   required
-                  onChange={handleChange}
-                  className={!isValidEmail ? 'is-invalid' : ''}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
-                {!isValidEmail && (
-                  <div className='invalid-feedback'>Please enter a valid email address.</div>
-                )}
 
                 <MDBInput wrapperClass='mb-4'
                   label='Password'
@@ -126,18 +99,12 @@ function Signup() {
                   type='password'
                   required
                   value={password}
-                  onChange={manageChange}
-                  className={!isValidPassword ? 'is-invalid' : ''}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
-                {!isValidPassword && (
-                  <div className='invalid-feedback'>Password must be at least 6 characters long and contain at least one uppercase letter and one special character.</div>
-                )}
-                <MDBValidationItem className='col-12' feedback='You must agree before submitting.' invalid>
-                  <MDBCheckbox label='Agree to terms and conditions' id='invalidCheck' required />
-                </MDBValidationItem>
-                <MDBValidationItem className='col-12' invalid={!isValidEmail || !isValidPassword}>
-                  <MDBBtn className='w-100 mb-4' size='md' type='submit'>sign up</MDBBtn>
-                </MDBValidationItem>
+
+                <MDBBtn className='w-100 mb-4' size='md' type='submit'>sign up</MDBBtn>
+
+                <p>Already have an account? <Link to = '/login'>Log In</Link></p>
               </Form>
             </MDBCardBody>
           </MDBCard>
@@ -145,6 +112,6 @@ function Signup() {
       </MDBRow>
     </MDBContainer>
   );
-}
+};
 
 export default Signup;

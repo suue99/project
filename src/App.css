@@ -122,6 +122,10 @@ body {
   } 
 
 
+  .logout{
+    margin-left: 10px;
+  }
+
   .access-text{
     font-family: Geologica;
     font-size: 15px;

@@ -38,7 +38,6 @@ function Menubar() {
                 
                 
                 <NavDropdown title="Profile" id="basic-nav-dropdown" menuVariant="dark">
-                    <NavDropdown.Item>    <Nav.Link as = {Link} to  = "/Profile" ><span className='option'>  Profile-Page </span> </Nav.Link></NavDropdown.Item>
                     <NavDropdown.Item>    <Nav.Link as = {Link} to  = "/Login" > <span className='option'> Log In </span>  </Nav.Link></NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item>    <Nav.Link as = {Link} to  = "/Signup" > <span className='option'> Sign Up </span></Nav.Link></NavDropdown.Item>

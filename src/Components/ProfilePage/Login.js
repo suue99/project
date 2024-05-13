@@ -1,48 +1,71 @@
-import React from 'react';
-import { Col, Row, Container, Card } from "react-bootstrap";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../Firebase';
 
-function Login () {
-    return (
-        <Container>
+const Login = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const onLogin = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+    
+        const user = userCredential.user;
+        navigate('/', { state: { welcomeMessage: `Welcome back!` } });
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setErrorMessage(errorMessage);
+        console.error(errorCode, errorMessage);
+      });
+  };
+
+  return (
+    <Container>
       <Row className="vh-100 d-flex justify-content-center align-items-center">
         <Col md={8} lg={6} xs={12}>
-
           <Card className="shadow">
             <Card.Body>
               <div className="mb-3 mt-4">
                 <h2 className="fw-bold mb-2 text-uppercase">Welcome back!</h2>
                 <p className=" mb-5">Please enter your email and password!</p>
-                <Form className="mb-3">
+                <Form className="mb-3" onSubmit={onLogin}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label className="text-center">
-                      Email address
-                    </Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Label className="text-center">Email address</Form.Label>
+                    <Form.Control
+                      type="email"
+                      placeholder="Enter email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
                   </Form.Group>
 
                   <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Enter Password" />
+                    <Form.Control
+                      type="password"
+                      placeholder="Enter Password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
                   </Form.Group>
-                  <div className="mb-3">
-                    <p className="small">
-                      <a className="text-primary" href="#!">
-                        Forgot password?
-                      </a>
-                    </p>
-                  </div>
-                  <div className="d-grid">
-                  <Link to = '/Home'><Button size="lg" variant="primary" type="submit" >
-                 Login
-                    </Button> </Link> 
-                  </div>
+                  {errorMessage && <div className="text-danger mb-3">{errorMessage}</div>}
+                  <Button className="w-100 mb-4" size="lg" variant="primary" type="submit">
+                    Login
+                  </Button>
                 </Form>
                 <div className="mt-3">
                   <p className="mb-0  text-center">
-                    Don't have an account?{" "}
+                    Don't have an account?{' '}
                     <Link to="/Signup" className="text-primary fw-bold">
                       Sign Up
                     </Link>
@@ -54,8 +77,7 @@ function Login () {
         </Col>
       </Row>
     </Container>
-    )
-  }
+  );
+};
 
-
-export default Login
+export default Login;

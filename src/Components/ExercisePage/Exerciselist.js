@@ -32,7 +32,7 @@ function ExerciseList() {
     }, []);
 
     useEffect(() => {
-        // Filter exercises based on the filter value
+       
         const filteredData = exercises.filter(exercise =>
             exercise.title.toLowerCase().includes(filter.toLowerCase())
         );
@@ -44,7 +44,7 @@ function ExerciseList() {
             <div className="exercise-filter">
                 <input
                     type="text"
-                    placeholder="Filter exercises..."
+                    placeholder="Search exercises..."
                     value={filter}
                     onChange={(e) => setFilter(e.target.value)}
                 />
