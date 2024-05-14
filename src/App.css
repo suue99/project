@@ -13,8 +13,14 @@
   src: url("./Fonts/Sacramento-Regular.ttf");
 }
 
+@font-face {
+  font-family: Bricolage;
+  src: url("./Fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf");
+}
+
 *{
   font-family: Asap;
+  
      
 }
 
@@ -22,6 +28,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('./Images/nu-back.jpg');
+    background-color: purple;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -116,8 +123,8 @@ body {
   
   .jointly-text{
     color: white;
-    font-size: 33px;
-    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    font-family:  Bricolage;
     margin-top: 80px;
   } 
 
@@ -127,7 +134,7 @@ body {
   }
 
   .access-text{
-    font-family: Geologica;
+    font-family:Bricolage;
     font-size: 15px;
     margin-top: 50px;
     color: white;
@@ -174,6 +181,62 @@ body {
     margin-top: 30px;
   }
   
+.empty{
+ 
+  height: 120px;
+}
+  
+
+
+  .options-container{
+    padding: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    display: grid;
+    gap: 20px; 
+    color: rgb(32, 44, 54);
+  }
+
+  .expert{
+    border: 1px solid rgb(87, 127, 150); 
+    background-color: rgb(242, 249, 253);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; flex-direction: column;
+    height: 320px;
+  }
+
+  .always{
+    border: 1px solid rgb(87, 127, 150); 
+    background-color: rgb(242, 249, 253);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 320px;
+  
+  }
+
+  .perfect{
+    border: 1px solid rgb(87, 127, 150); 
+    background-color: rgb(242, 249, 253);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 320px;
+  }
+
+  .icon{
+    color: black;
+
+  }
+
+  .para-one{
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+.h-1{
+   text-align: center;
+   margin-top: 50px;
+}
 
 
 
@@ -211,6 +274,11 @@ body {
         display: flex;
        flex-direction: column;
       }
+
+      /*.options-container{
+        display: flex;
+        flex-direction: column;
+      }*/
 
       .hi{
         text-align: center;
