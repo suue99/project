@@ -283,8 +283,7 @@ body {
 
 
 
-
-
+/*Testimonial*/
 
 
 
@@ -319,10 +318,9 @@ body {
        margin-left: 20px;
       }
 
-      /*.options-container{
-        display: flex;
-        flex-direction: column;
-      }*/
+      .options-container{
+        margin-left: 40px;
+      }
 
       .hi{
         text-align: center;

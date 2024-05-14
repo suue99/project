@@ -8,6 +8,7 @@ import Slider from "./Slider";
 import docImage from '../../Images/medical-image.jpg'
 import exImage from '../../Images/exercise.jpg'
 import chatImage from '../../Images/chat.jpg'
+import Testimonials from "./Testimonials";
 
 
 
@@ -73,9 +74,7 @@ function Home() {
             )}
         </div>
 
-       <div className="empty">
-
-       </div>
+       <div className="empty"> </div>
 
        
    
@@ -118,6 +117,8 @@ function Home() {
         </span>
 
         </div>
+
+        <Testimonials/>
 
         </div>
     );
