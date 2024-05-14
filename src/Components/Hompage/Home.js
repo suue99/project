@@ -4,10 +4,11 @@ import React, { useState, useEffect } from 'react';
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../Firebase";
 import { useNavigate } from 'react-router-dom';
-import { FaUserDoctor } from "react-icons/fa6";
-import { LuDumbbell } from "react-icons/lu";
-import { FaHandsHelping } from "react-icons/fa";
 import Slider from "./Slider";
+import docImage from '../../Images/medical-image.jpg'
+import exImage from '../../Images/exercise.jpg'
+import chatImage from '../../Images/chat.jpg'
+
 
 
 function Home() {
@@ -80,33 +81,42 @@ function Home() {
    
 
         <div className="options-container">
-            <span className="expert">
-                <h1 className="h-1">Expert Guidance <FaUserDoctor className="icon" /></h1>
-               
-                <p className="para-one">Connect with experienced
-                    physiotherapists for tailored
-                    advice and treatment plans.
-                </p>
-            </span>
+       
+        <span className="expert">
+        <div>
+            <img src={docImage} alt="Medical Professional" />
+            <h1 className="h-1">Expert Guidance</h1>
+            <p className="para-one">
+            Connect with experienced physiotherapists for tailored advice and treatment plans.
+            </p>
+        </div>
+        </span>
 
-            <span className="perfect">
-                <h1  className="h-1">Your Perfect Plan <LuDumbbell className="icon" /></h1>
-            
-                <p  className="para-one">Discover exercises tailored 
+        <span className="perfect">
+        <div>
+            <img src={exImage} alt="Your Perfect Plan" />
+            <h1 className="h-1">Expert Guidance</h1>
+            <p className="para-one">
+            Discover exercises tailored 
                     specifically to your condition
                     and goals
-                </p>
-            </span>
+            </p>
+        </div>
+        </span>
 
-            <span className="always">
-                <h1  className="h-1">Always here for you <FaHandsHelping  className="icon" /></h1>
-             
-                <p  className="para-one">Get the help you need
+        <span className="always">
+        <div>
+            <img src={chatImage} alt="Always here for you" />
+            <h1 className="h-1">Expert Guidance</h1>
+            <p className="para-one">
+            Get the help you need
                     whenever you need it. 
                     From expert advice to 
                     exercise modification
-                </p>
-            </span>
+            </p>
+        </div>
+        </span>
+
         </div>
 
         </div>

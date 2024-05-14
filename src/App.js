@@ -4,7 +4,7 @@ import React from 'react';
 import Menubar from "./Components/Hompage/Menubar";
 import { BrowserRouter, Route ,Routes } from 'react-router-dom';
 import Home from './Components/Hompage/Home';
-import Profile from './Components/ProfilePage/Profile';
+import Policy from './Components/AboutPage/Policy';
 import ExerciseDetail from './Components/ExercisePage/Exercisedetail';
 import ExerciseList from './Components/ExercisePage/Exerciselist';
 import Chat from './Components/ChatPage/Chat';
@@ -24,7 +24,7 @@ function App() {
       
       <Route path = "/" element = {<Home />} />
       <Route path = "/Faq" element = {<Faq />} />
-      <Route path = "/Profile" element = {<Profile />} />
+      <Route path = "/Policy" element = {<Policy />} />
       <Route path = "/Chat" element = {<Chat />} />
       <Route path = "/Signup" element = {<Signup />} />
       <Route path = "/Login" element = {<Login />} />

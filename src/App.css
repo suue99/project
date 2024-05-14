@@ -201,49 +201,81 @@ body {
     color: rgb(209, 214, 218);
   }
 
-  .expert{
-    border: 1px solid rgb(87, 127, 150); 
-    background-color: rgb(62, 129, 168);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex; flex-direction: column;
-    height: 300px;
+ 
+    .expert {
+      border: 1px solid rgb(87, 127, 150);
+      background-color: rgb(62, 129, 168);
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      align-items: center; /* Center content horizontally */
+      text-align: center;
+      padding: 0px;
+      height: 450px;
+      width: 300px;
+    }
+    
+    .expert img {
+      width: 100%;
+      height: 260px; /* Adjust image width as needed */
+    
+    }
+    
 
-  }
 
   .always{
-    border: 1px solid rgb(87, 127, 150); 
-    background-color: rgb(62, 129, 168);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 300px;
+    border: 1px solid rgb(87, 127, 150);
+      background-color: rgb(62, 129, 168);
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      align-items: center; /* Center content horizontally */
+      text-align: center;
+      padding: 0px;
+      height: 450px;
+      width: 300px;
    
-  
   }
 
+  .always img {
+    width: 100%;
+    height: 260px; /* Adjust image width as needed */
+  
+  }
+  
+
+
   .perfect{
-    border: 1px solid rgb(87, 127, 150); 
+    border: 1px solid rgb(87, 127, 150);
     background-color: rgb(62, 129, 168);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 300px;
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    padding: 0px;
+    height: 450px;
+    width: 300px;
  
   }
 
+  .perfect img {
+    width: 100%;
+    height: 260px; /* Adjust image width as needed */
+  
+  }
+  
+
   .icon{
-    color: blue;
+    color: rgb(227, 227, 241);
 
   }
 
   .para-one{
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 30px;
   }
 
 .h-1{
    text-align: center;
-   margin-top: 50px;
+   margin-top: 10px;
 }
 
 
@@ -294,7 +326,7 @@ body {
       }
 
       .jointly-text{
-        font-size: 40px;
+        font-size: 60px;
       }
 
       .slider {
@@ -317,6 +349,15 @@ body {
         margin-top: 40px;
         align-self: center;
         
+      }
+
+
+      /*policy page*/
+
+      .privacy{
+        padding: 30px;
+        color: aliceblue;
+
       }
       
   }

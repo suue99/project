@@ -1,6 +1,6 @@
 
 import { Accordion, Container,  } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 
 function Faq () {
 
@@ -31,6 +31,10 @@ function Faq () {
                <br/>
                 Expert Physio Support: Get answers, personalized advice, and motivation through our live physiotherapist chat.
             </section>
+
+            <span>
+              Find out more about out privacy policies <Link to = '/Policy'> here </Link>
+            </span>
         
         </span>
         </Container>

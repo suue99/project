@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Firebase';
-import { Form } from 'react-bootstrap';
+import { Form, Alert } from 'react-bootstrap'; // Import Alert from react-bootstrap
 import { Link } from 'react-router-dom';
 import {
   MDBBtn,
@@ -22,27 +22,38 @@ const Signup = () => {
     lastname: '',
   });
 
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [agreePrivacyPolicy, setAgreePrivacyPolicy] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
   const onChange = (e) => {
     setFieldValue({ ...fieldValue, [e.target.name]: e.target.value });
   };
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!agreePrivacyPolicy) {
+      setErrorMessage("Please agree to the privacy policy");
+      return;
+    }
+
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      // Successfully signed up
       const user = userCredential.user;
       console.log(user);
       navigate('/', { state: { welcomeMessage: `Hello, ${fieldValue.firstname}` } });
     } catch (error) {
-      
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error(errorCode, errorMessage);
+
+      if (errorCode === 'auth/email-already-in-use') {
+        setErrorMessage('This email address is already in use. Please use a different email address.');
+      } else {
+        setErrorMessage('An error occurred. Please try again later.');
+      }
     }
   };
 
@@ -60,6 +71,7 @@ const Signup = () => {
           <MDBCard className='my-5'>
             <MDBCardBody className='p-5'>
               <Form onSubmit={handleSubmit}>
+                {errorMessage && <Alert variant='danger'>{errorMessage}</Alert>} {/* Use Alert component from react-bootstrap */}
                 <MDBRow>
                   <MDBCol col='6'>
                     <MDBInput wrapperClass='mb-4' 
@@ -102,9 +114,22 @@ const Signup = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
 
-                <MDBBtn className='w-100 mb-4' size='md' type='submit'>sign up</MDBBtn>
+                <div className="form-check mb-4">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="privacyPolicyCheck"
+                    checked={agreePrivacyPolicy}
+                    onChange={(e) => setAgreePrivacyPolicy(e.target.checked)}
+                  />
+                  <label className="form-check-label" htmlFor="privacyPolicyCheck">
+                    I agree to the <Link to="/Policy">Privacy Policy</Link>
+                  </label>
+                </div>
 
-                <p>Already have an account? <Link to = '/login'>Log In</Link></p>
+                <MDBBtn className='w-100 mb-4' size='md' type='submit'>Sign Up</MDBBtn>
+
+                <p>Already have an account? <Link to="/login">Log In</Link></p>
               </Form>
             </MDBCardBody>
           </MDBCard>
