@@ -21,7 +21,7 @@ function Menubar() {
              
                   <Nav.Link as = {Link} to = "/" > <span className='option'>Home</span>  </Nav.Link>
                   
-                  <NavDropdown className="about" title="About Us" id="basic-nav-dropdown" menuVariant="dark">
+                  <NavDropdown className="about" title="About Us" id="nav-drop" menuVariant="dark">
                   <NavDropdown.Item>
                     <Nav.Link as = {Link} to  = "/Faq"> <span className='option'>FAQ's</span> </Nav.Link>
                     </NavDropdown.Item>  
@@ -37,7 +37,7 @@ function Menubar() {
               
                 
                 
-                <NavDropdown title="Profile" id="basic-nav-dropdown" menuVariant="dark">
+                <NavDropdown title="Profile" id="nav-drop" menuVariant="dark">
                     <NavDropdown.Item>    <Nav.Link as = {Link} to  = "/Login" > <span className='option'> Log In </span>  </Nav.Link></NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item>    <Nav.Link as = {Link} to  = "/Signup" > <span className='option'> Sign Up </span></Nav.Link></NavDropdown.Item>

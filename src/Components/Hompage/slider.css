@@ -1,0 +1,37 @@
+
+
+.range-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 400px;
+  background-color: rgb(33, 85, 46);
+  border-radius: 10px;
+  
+}
+.emoji{
+  align-self: center;
+  font-size:100px
+}
+
+.slider{
+  align-self: center;
+ 
+}
+
+.range-h3{
+  align-self: center;
+  color: rgb(251, 255, 0);
+}
+
+.amazing{
+  color: rgb(9, 173, 9);
+  padding: 10px;
+}
+
+.horrible{
+  color: rgb(255, 39, 39);
+  margin-left: 10px;
+
+}

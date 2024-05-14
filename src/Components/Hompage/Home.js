@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaUserDoctor } from "react-icons/fa6";
 import { LuDumbbell } from "react-icons/lu";
 import { FaHandsHelping } from "react-icons/fa";
-
+import Slider from "./Slider";
 
 
 function Home() {
@@ -41,6 +41,7 @@ function Home() {
                     <h2 className="hi">{location.state.welcomeMessage}</h2>
                 )}
             </div>
+
            
             <span className="subcontainer-1" >
                 <h3 className="jointly-text">Jointly+ <br></br>Take charge of Osteo Arthritis</h3>  
@@ -60,8 +61,8 @@ function Home() {
                 )}
             </span>
             
-            <span className="youth-art">
-                <img src="https://img.freepik.com/free-vector/flat-people-looking-up-top-view_23-2148970661.jpg" height="420" width="420" alt="a random doodle" />
+            <span className="slider">
+            <Slider/>
             </span>
 
             {!user && (
@@ -76,7 +77,7 @@ function Home() {
        </div>
 
        
-
+   
 
         <div className="options-container">
             <span className="expert">
