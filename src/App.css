@@ -27,8 +27,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('./Images/nu-back.jpg');
-    background-color: purple;
+    background-image: url('./Images/—Pngtree—simple\ white\ flat\ vectors\ with_1353885.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -72,8 +71,14 @@ body {
 
   }
 
+  .accordion{
+    padding: 40px;
+    width: 500px;
+    align-self: center;
+  }
+
   .empower{
-    color: white;
+    color: rgb(14, 9, 9);
       margin-top: 40px;
       padding: 4px;
       margin-left: 20px;
@@ -90,7 +95,7 @@ body {
   }
 
   .paragraph-faq{
-    color: white;
+    color: black;
     font-size: 20px;
     
   }
@@ -102,14 +107,14 @@ body {
   }
 
   .heading-two{
-    color: white;
+    color: rgb(14, 11, 11);
     font-size: 30px;
     font-weight: 600 ;    
    
   }
 
   .targeted {
-    color: white;
+    color: rgb(15, 12, 12);
     margin-top: -30px;
     font-size: 20px;
   }
@@ -120,13 +125,13 @@ body {
   /*Homepage styling*/
   .hi{
     font-size: 25px;
-    color: rgb(245, 234, 83);
+    color: rgb(218, 83, 245);
     text-align: left;
     font-family:Cursive-light;
   }
   
   .jointly-text{
-    color: white;
+    color: black;
     font-size: 40px;
     font-family:  Bricolage;
     margin-top: 50px;
@@ -142,7 +147,7 @@ body {
     font-family:Bricolage;
     font-size: 15px;
     margin-top: 60px;
-    color: white;
+    color: rgb(41, 95, 211);
  
   }
 
@@ -199,11 +204,11 @@ body {
     margin-top: 70px;
   }
   
-.empty{
- 
-  height: 120px;
-}
+  .empty{
   
+    height: 80px;
+  }
+    
 
 
   .options-container{
@@ -218,13 +223,14 @@ body {
  
     .expert {
       border: 1px solid rgb(87, 127, 150);
-      background-color: rgb(62, 129, 168);
+      background-color: rgb(14, 105, 121);
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       align-items: center;
       text-align: center;
       padding: 0px;
-      height: 450px;
+      height: 500px;
+      color: black;
 
       
     }
@@ -236,21 +242,20 @@ body {
     }
     
 
-
   .always{
     border: 1px solid rgb(87, 127, 150);
-      background-color: rgb(62, 129, 168);
+      background-color: rgb(14, 105, 121);
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       align-items: center; 
       text-align: center;
       padding: 0px;
-      height: 450px;
-     
-   
-  }
+      height: 500px;
+      color: black;
+       }
 
-  .always img {
+
+    .always img {
     width: 100%;
     height: 300px; 
   }
@@ -259,15 +264,28 @@ body {
 
   .perfect{
     border: 1px solid rgb(62, 129, 168);;
-    background-color: rgb(62, 129, 168);
+    background-color: rgb(14, 105, 121);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     align-items: center;
     text-align: center;
     padding: 0px;
-    height: 450px;
-
+    height: 500px;
+    color: black;
  
+  }
+
+  .link-1{
+    text-decoration: none;
+    color: rgb(30, 219, 13);
+    margin-top: 20px;
+    font-family: Bricolage;
+    font-size: 20px;
+   
+  }
+
+  .link-1:hover{
+  color: black;
   }
 
   .perfect img {
@@ -278,20 +296,27 @@ body {
   }
   
 
-  .icon{
-    color: rgb(227, 227, 241);
-
-  }
-
   .para-one{
     text-align: center;
     padding: 30px;
   }
 
-.h-1{
+ .h-1{
    text-align: center;
    margin-top: 10px;
 }
+
+  /*policy page*/
+  .policy-text{
+  padding: 30px;
+  }
+
+  .privacy{
+    padding: 30px;
+    color: rgb(61, 160, 247);
+
+}
+
 
 
 
@@ -367,7 +392,7 @@ body {
 
       .privacy{
         padding: 30px;
-        color: aliceblue;
+        color: rgb(61, 160, 247);
 
       }
       

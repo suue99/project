@@ -90,6 +90,7 @@ function Home() {
             <h1 className="h-1">Expert Guidance</h1>
             <p className="para-one">
             Connect with experienced physiotherapists for tailored advice and treatment plans.
+            <h3 className="link-1"> <Link to = '/chat' className="link-1">Chat with a Physio</Link></h3>
             </p>
         </div>
         </span>
@@ -97,12 +98,15 @@ function Home() {
         <span className="perfect">
         <div>
             <img src={exImage} alt="Your Perfect Plan" />
-            <h1 className="h-1">Expert Guidance</h1>
+            <h1 className="h-1">Your Perfect Plan</h1>
             <p className="para-one">
             Discover exercises tailored 
                     specifically to your condition
                     and goals
+            <h3 className="link-1" > <Link to = '/list' className="link-1">Access our exercise library </Link></h3>
             </p>
+
+            
         </div>
         </span>
 

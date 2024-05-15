@@ -5,7 +5,7 @@ import {
 
  function Footer() {
   return (
-    <MDBFooter className='text-center text-white' style={{ background: 'transparent'}}>
+    <MDBFooter className='text-center text-white' style={{ background: 'black'}}>
 
       <div className='text-center text-white p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         © 2024 Copyright:  Jointly+ <br/>

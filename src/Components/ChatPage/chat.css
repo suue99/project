@@ -1,8 +1,10 @@
 
 
 .chat-container {
+   
     width: 370px;
-    margin: 20px auto; 
+    margin:80px auto;
+
     padding: 20px;
     background-color: hwb(177 62% 9%);
     border: 1px solid #9ee9e5; 
@@ -22,6 +24,7 @@
 }
 .chat-container ul {
     list-style-type: none; 
+    margin-top: 30px;
     padding: 0;
     height: 350px;        
     overflow-y: auto;    

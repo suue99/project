@@ -32,14 +32,14 @@ function Faq () {
                 Expert Physio Support: Get answers, personalized advice, and motivation through our live physiotherapist chat.
             </section>
 
-            <span>
+            <span className="policy-text">
               Find out more about out privacy policies <Link to = '/Policy'> here </Link>
             </span>
         
         </span>
         </Container>
         
-        <Accordion className="mt-3 p-4 " flush>
+        <Accordion className=" accordion mt-3 " flush>
           <Accordion.Item eventKey="0">
             <Accordion.Header>FAQ 1</Accordion.Header>
             <Accordion.Body>
@@ -54,6 +54,18 @@ function Faq () {
           </Accordion.Item>
           <Accordion.Item eventKey="1">
             <Accordion.Header>FAQ 2</Accordion.Header>
+            <Accordion.Body>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>FAQ 3</Accordion.Header>
             <Accordion.Body>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

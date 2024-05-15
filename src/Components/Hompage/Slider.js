@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../Hompage/slider.css';
 
 function Slider () {
-    const [emoji, setEmoji] = useState('&#128528'); // Initial emoji
+    const [emoji, setEmoji] = useState('&#128528');
 
     const emojis = ['&#128513', '&#128516', '&#128528', '&#128534', '&#128557'];
 
