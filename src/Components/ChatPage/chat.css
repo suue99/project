@@ -23,7 +23,7 @@
 .chat-container ul {
     list-style-type: none; 
     padding: 0;
-    height: 250px;        
+    height: 350px;        
     overflow-y: auto;    
 }
 

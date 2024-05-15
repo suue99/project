@@ -12,6 +12,7 @@ import Testimonials from "./Testimonials";
 
 
 
+
 function Home() {
     const location = useLocation();
     const navigate = useNavigate();
@@ -36,7 +37,7 @@ function Home() {
 
     return (
 
-        <div>
+    <div>
         <div className="home-container">
             <div className="greeting">
                 {location.state && location.state.welcomeMessage && (
@@ -61,11 +62,13 @@ function Home() {
                         Logout
                     </Button>
                 )}
-            </span>
-            
-            <span className="slider">
-            <Slider/>
-            </span>
+              </span>
+
+              <span className="slider">
+                 <Slider/>
+              </span>
+
+
 
             {!user && (
                 <span className="subcontainer-3">

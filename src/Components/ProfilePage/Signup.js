@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Firebase';
-import { Form, Alert } from 'react-bootstrap'; // Import Alert from react-bootstrap
+import { Form, Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import {
   MDBBtn,
