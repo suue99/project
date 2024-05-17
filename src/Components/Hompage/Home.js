@@ -8,7 +8,6 @@ import Slider from "./Slider";
 import docImage from '../../Images/medical-image.jpg'
 import exImage from '../../Images/exercise.jpg'
 import chatImage from '../../Images/chat.jpg'
-import Testimonials from "./Testimonials";
 
 
 
@@ -72,7 +71,7 @@ function Home() {
 
             {!user && (
                 <span className="subcontainer-3">
-                    <Link to={'/Signup'}> <Button className="p-3">Get started</Button></Link>
+                    <Link to={'/Signup'}> <Button id="warning-btn" className=" p-3" variant="warning" size="lg">Get started</Button></Link>
                 </span>
             )}
         </div>
@@ -125,7 +124,6 @@ function Home() {
 
         </div>
 
-        <Testimonials/>
 
         </div>
     );

@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Asap;
-    src: url("./Fonts/AsapCondensed-Regular.ttf");
+  font-family: Asap;
+  src: url("./Fonts/AsapCondensed-Regular.ttf");
 }
 
 @font-face {
@@ -18,382 +18,317 @@
   src: url("./Fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf");
 }
 
-*{
+* {
   font-family: Asap;
-  
-     
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url('./Images/—Pngtree—simple\ white\ flat\ vectors\ with_1353885.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  } 
+  margin: 0;
+  padding: 0;
+  background-image: url("./Images/—Pngtree—modern.png"); /*free background photos from pngtree.com*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-  .hi{
-    
-    margin-top: 100px;
-    text-align: center;
-    font-size: 70px;
-    color: aquamarine;
-  }
+.menubar-container {
+  justify-content: end;
+}
 
-  .links {
-    text-decoration: none;
-    color: white;
-  }
+.hi {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 70px;
+  color: rgb(235, 247, 77);
+}
 
-  .option{
-    color: white;
-  }
+.links {
+  text-decoration: none;
+  color: white;
+}
 
-  #nav-drop{
-    color: white;
-  }
+.option {
+  color: white;
+}
 
-  .login-option{
-    text-decoration: none;
-    color: green;
-  }
+#nav-drop {
+  color: white;
+}
 
-  /*FAQ page styling*/
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-      gap: 20px;
-    }
+.login-option {
+  text-decoration: none;
+  color: green;
+}
 
-  .faq-container-one{
-   grid-column: 1;
+/*FAQ page styling*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
 
-  }
+.faq-container-one {
+  grid-column: 1;
+}
 
-  .accordion{
-    padding: 40px;
-  
-    align-self: center;
-  }
+.accordion {
+  padding: 40px;
 
-  .empower{
-    color: rgb(14, 9, 9);
-      margin-top: 40px;
-      padding: 4px;
-      margin-left: 20px;
-      font-size: 30px;
-      text-align: left;
-      font-weight: 600;
+  align-self: center;
+}
 
+.empower {
+  color: rgb(14, 9, 9);
+  margin-top: 40px;
+  padding: 4px;
+  margin-left: 20px;
+  font-size: 30px;
+  text-align: left;
+  font-weight: 600;
+}
 
-  }
+.offer {
+  font-size: 32px;
+  margin-top: 30px;
+}
 
-  .offer{
-    font-size: 32px;
-    margin-top: 30px;
-  }
+.paragraph-faq {
+  color: black;
+  font-size: 20px;
+}
 
-  .paragraph-faq{
-    color: black;
-    font-size: 20px;
-    
-  }
-
-  .faq-container-two{
+.faq-container-two {
   grid-column: 2;
-  grid-row: third-line
-    
+  grid-row: third-line;
+}
+
+.heading-two {
+  color: rgb(14, 11, 11);
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.targeted {
+  color: rgb(15, 12, 12);
+  margin-top: -30px;
+  font-size: 20px;
+}
+
+/*Homepage styling*/
+.hi {
+  font-size: 30px;
+  color: rgb(215, 245, 83);
+  text-align: left;
+  font-family: Cursive-light;
+}
+
+.jointly-text {
+  color: black;
+  font-size: 40px;
+  font-family: Bricolage;
+  margin-top: 50px;
+}
+
+#warning-btn {
+  margin-top: 15px;
+}
+
+.logout {
+  margin-left: 10px;
+}
+
+.access-text {
+  font-family: Bricolage;
+  font-size: 16px;
+  margin-top: 80px;
+  color: rgb(2, 4, 8);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  margin-left: 40px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.home-container {
+  padding: 20px;
+  display: grid;
+  row-gap: 0px;
+  column-gap: 100px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 70px;
+}
+
+.greeting {
+  grid-column: 1;
+  grid-row: 1;
+}
+.subcontainer-1 {
+  margin-top: -80px;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.subcontainer-2 {
+  grid-column: 1;
+  grid-row: 3;
+  margin-top: -90px;
+}
+
+.subcontainer-3 {
+  grid-column: 1;
+  margin-top: -75px;
+}
+
+.empty {
+  height: 80px;
+}
+
+.options-container {
+  padding: 70px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: grid;
+  gap: 60px;
+  color: rgb(209, 214, 218);
+}
+
+.expert {
+  border: 1px solid rgb(87, 127, 150);
+  background-color: rgb(252, 255, 86);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  height: 530px;
+  color: black;
+}
+
+.expert img {
+  width: 100%;
+  height: 300px;
+}
+
+.always {
+  border: 1px solid rgb(252, 255, 86);
+  background-color: rgb(252, 255, 86);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  height: 530px;
+  color: black;
+}
+
+.always img {
+  width: 100%;
+  height: 300px;
+}
+
+.perfect {
+  border: 1px solid rgb(252, 255, 86);
+  background-color: rgb(252, 255, 86);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  height: 530px;
+  color: black;
+}
+
+.link-1 {
+  text-decoration: none;
+  color: rgb(13, 61, 219);
+  margin-top: 20px;
+  font-family: Bricolage;
+  font-size: 20px;
+}
+
+.link-1:hover {
+  color: black;
+}
+
+.perfect img {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.para-one {
+  text-align: center;
+  padding: 30px;
+}
+
+.h-1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*policy page*/
+.policy-text {
+  padding: 30px;
+}
+
+.privacy {
+  padding: 30px;
+  color: rgb(31, 10, 10);
+}
+
+@media only screen and (max-width: 770px) {
+  /*faq page*/
+  .container {
+    display: flex;
+    flex-direction: column;
   }
 
-  .heading-two{
-    color: rgb(14, 11, 11);
+  .jointly-faq {
     font-size: 30px;
-    font-weight: 600 ;    
-   
   }
 
-  .targeted {
-    color: rgb(15, 12, 12);
-    margin-top: -30px;
-    font-size: 20px;
-  }
+  /*Home page*/
 
-
-
-
-  /*Homepage styling*/
-  .hi{
-    font-size: 25px;
-    color: rgb(218, 83, 245);
-    text-align: left;
-    font-family:Cursive-light;
-  }
-  
-  .jointly-text{
-    color: black;
-    font-size: 40px;
-    font-family:  Bricolage;
-    margin-top: 50px;
-    
-  } 
-
-
-  .logout{
+  .home-container {
+    display: flex;
+    flex-direction: column;
     margin-left: 10px;
   }
 
-  .access-text{
-    font-family:Bricolage;
-    font-size: 15px;
-    margin-top: 60px;
-    color: rgb(41, 95, 211);
- 
+  .hi {
+    text-align: center;
   }
 
-  .button-container{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 30px;
-    margin-left: 40px;
-    align-items:start;
-    margin-top: 20px;
-    
-  
+  .jointly-text {
+    font-size: 60px;
   }
 
-
-  .home-container {
-    padding: 20px;
-    display: grid;
-    row-gap: 0px;
-    column-gap: 100px;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    margin-left: 70px;
+  .slider {
+    align-self: center;
   }
-  
 
-  .greeting{
-    grid-column: 1;
-    grid-row: 1;
-  }
   .subcontainer-1 {
-    margin-top: -80px;
-    grid-column: 1;
-    grid-row: 2;
-   
+    text-align: center;
+    margin-top: 15px;
   }
-  
   .subcontainer-2 {
-    grid-column: 1;
-    grid-row: 3;
-    margin-top: -90px;
-  
+    margin-top: 30px;
+    text-align: center;
   }
-  
   .subcontainer-3 {
     grid-column: 1;
-   margin-top: -75px;
+    margin-top: 40px;
+    align-self: center;
   }
-  
-  .slider {
-    grid-row: 1 / span 3;
-    grid-column: 2;
-    margin-top: 70px;
-  }
-  
-  .empty{
-  
-    height: 80px;
-  }
-    
-
-
-  .options-container{
-    padding: 70px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    display: grid;
-    gap: 60px; 
-    color: rgb(209, 214, 218);
- 
-  }
-
- 
-    .expert {
-      border: 1px solid rgb(87, 127, 150);
-      background-color: rgb(14, 105, 121);
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      align-items: center;
-      text-align: center;
-      padding: 0px;
-      height: 530px;
-      color: black;
-
-      
-    }
-    
-    .expert img {
-      width: 100%;
-      height: 300px;
-    
-    }
-    
-
-  .always{
-    border: 1px solid rgb(87, 127, 150);
-      background-color: rgb(14, 105, 121);
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      align-items: center; 
-      text-align: center;
-      padding: 0px;
-      height: 480px;
-      color: black;
-       }
-
-
-    .always img {
-    width: 100%;
-    height: 300px; 
-  }
-  
-
-
-  .perfect{
-    border: 1px solid rgb(62, 129, 168);;
-    background-color: rgb(14, 105, 121);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    align-items: center;
-    text-align: center;
-    padding: 0px;
-    height: 530px;
-    color: black;
- 
-  }
-
-  .link-1{
-    text-decoration: none;
-    color: rgb(30, 219, 13);
-    margin-top: 20px;
-    font-family: Bricolage;
-    font-size: 20px;
-   
-  }
-
-  .link-1:hover{
-  color: black;
-  }
-
-  .perfect img {
-    width: 100%;
-    height: 300px;
-    border-radius: 5px;
-  
-  }
-  
-
-  .para-one{
-    text-align: center;
-    padding: 30px;
-  }
-
- .h-1{
-   text-align: center;
-   margin-top: 10px;
-}
 
   /*policy page*/
-  .policy-text{
-  padding: 30px;
-  }
 
-  .privacy{
+  .privacy {
     padding: 30px;
-    color: rgb(61, 160, 247);
-
-}
-
-
-
-
-/*Testimonial*/
-
-
-
-
-
-
-
-
-
-
-
-
-  @media only screen and (max-width: 770px) {
-   
-   /*faq page*/
-    .container {
-      display: flex;
-     flex-direction: column;
-      
-      }
-
-      .jointly-faq{
-        font-size: 30px;
-      }
-
-
-/*Home page*/
-
-
-      .home-container {
-       display: flex;
-       flex-direction: column;
-       margin-left: 10px;
-      }
-
-      .hi{
-        text-align: center;
-
-      }
-
-      .jointly-text{
-        font-size: 60px;
-      }
-
-      .slider {
-      align-self: center;
-      }
-
-      .subcontainer-1 {
-
-       text-align: center;
-       margin-top: 15px;
-       
-      }
-      .subcontainer-2 {
-       margin-top: 30px;
-       text-align: center;
-      
-      }
-      .subcontainer-3 {
-        grid-column: 1;
-        margin-top: 40px;
-        align-self: center;
-        
-      }
-
-
-      /*policy page*/
-
-      .privacy{
-        padding: 30px;
-        color: rgb(61, 160, 247);
-
-      }
-      
   }
+}
