@@ -29,7 +29,7 @@ function Menubar() {
                                 title="About Us"
                                 id="nav-drop"
                                 menuVariant="dark"
-                                onClick={(e) => e.stopPropagation()} // Prevent closing when dropdown is clicked
+                                onClick={(e) => e.stopPropagation()} 
                             >
                                 <NavDropdown.Item as={Link} to="/Faq">
                                     <span className="option">FAQ's</span>
@@ -45,7 +45,7 @@ function Menubar() {
                                 title="Profile"
                                 id="nav-drop"
                                 menuVariant="dark"
-                                onClick={(e) => e.stopPropagation()} // Prevent closing when dropdown is clicked
+                                onClick={(e) => e.stopPropagation()} 
                             >
                                 <NavDropdown.Item as={Link} to="/Login">
                                     <span className="option">Log In</span>

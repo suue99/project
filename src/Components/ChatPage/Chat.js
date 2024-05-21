@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../Firebase';
-import { collection, addDoc, onSnapshot } from 'firebase/firestore';
+import { collection, onSnapshot } from 'firebase/firestore';
 import { signInAnonymously } from 'firebase/auth';
 import '../ChatPage/chat.css';
 
@@ -28,14 +28,6 @@ function Chat() {
 
     }, []);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        await addDoc(collection(db, 'user-messages'), {
-            username: 'Test User',
-            messageText: newMessage,
-        });
-        setNewMessage('');
-    };
 
     return (
         <div className="chat-container">
@@ -47,7 +39,7 @@ function Chat() {
                     <span>Physiotherapist:</span> {physioResponse}
                 </li>
             </ul>
-            <form onSubmit={handleSubmit}>
+            <form >
                 <input placeholder='Type a message' type="text" value={newMessage} onChange={(e) => setNewMessage(e.target.value)} />
                 <button type="submit">Send</button>
             </form>

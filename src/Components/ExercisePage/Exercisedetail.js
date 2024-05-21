@@ -16,13 +16,13 @@ const ExerciseDetail = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    console.log("ExerciseSlug received:", exerciseSlug); // Log exerciseSlug parameter
+    console.log("ExerciseSlug received:", exerciseSlug); 
     client.fetch(
       `*[exerciseSlug.current == $exerciseSlug]
       { title, description, joint, instructions, media { asset ->{ _id, url }, alt } }`,
       { exerciseSlug }
     ).then((data) => {
-      console.log("Fetched exercise data:", data); // Log fetched data for debugging
+      console.log("Fetched exercise data:", data);
       if (data && data.length > 0) {
         setExercise(data[0]);
       } else {

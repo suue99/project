@@ -71,7 +71,7 @@ const Signup = () => {
           <MDBCard className='my-5'>
             <MDBCardBody className='p-5'>
               <Form onSubmit={handleSubmit}>
-                {errorMessage && <Alert variant='danger'>{errorMessage}</Alert>} {/* Use Alert component from react-bootstrap */}
+                {errorMessage && <Alert variant='danger'>{errorMessage}</Alert>} 
                 <MDBRow>
                   <MDBCol col='6'>
                     <MDBInput wrapperClass='mb-4' 

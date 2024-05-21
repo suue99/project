@@ -61,8 +61,7 @@ function Policy() {
       any damages arising from your use of Jointly+. 5. Changes to Terms We may
       update these Terms and Conditions from time to time. We will notify you of
       any changes by posting the updated terms on our website. 6. Contact Us If
-      you have any questions about these policies, please contact us at [email
-      protected]</p>
+      you have any questions about these policies, please contact us at xxxx</p>
 
     </div>
   );

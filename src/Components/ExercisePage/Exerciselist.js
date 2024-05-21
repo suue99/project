@@ -27,7 +27,7 @@ function ExerciseList() {
             }`
         ).then(data => {
             setExerciseList(data);
-            setFilteredExercises(data); // Initialize filteredExercises with all exercises
+            setFilteredExercises(data);
         }).catch(console.error);
     }, []);
 
