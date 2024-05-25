@@ -12,6 +12,7 @@ import {
   MDBRow,
   MDBCol,
   MDBInput,
+  MDBSpinner
 } from 'mdb-react-ui-kit';
 
 const Signup = () => {
@@ -26,6 +27,7 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [agreePrivacyPolicy, setAgreePrivacyPolicy] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const onChange = (e) => {
     setFieldValue({ ...fieldValue, [e.target.name]: e.target.value });
@@ -39,6 +41,7 @@ const Signup = () => {
       return;
     }
 
+    setLoading(true);
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
@@ -54,6 +57,7 @@ const Signup = () => {
       } else {
         setErrorMessage('An error occurred. Please try again later.');
       }
+      setLoading(false);
     }
   };
 
@@ -65,7 +69,6 @@ const Signup = () => {
             One step closer <br />
             <span className="text-primary">to a better life</span>
           </h1>
-          
         </MDBCol>
         <MDBCol md='6'>
           <MDBCard className='my-5'>
@@ -127,7 +130,9 @@ const Signup = () => {
                   </label>
                 </div>
 
-                <MDBBtn className='w-100 mb-4' size='md' type='submit'>Sign Up</MDBBtn>
+                <MDBBtn className='w-100 mb-4' size='md' type='submit' disabled={loading}>
+                  {loading ? <MDBSpinner size='sm' role='status' tag='span' className='me-2' /> : 'Sign Up'}
+                </MDBBtn>
 
                 <p>Already have an account? <Link to="/login">Log In</Link></p>
               </Form>
