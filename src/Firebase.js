@@ -18,9 +18,11 @@ const firebaseConfig = {
   measurementId: "G-61B499RDFH"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app); 
 export const auth = getAuth(app)
 
 export default app;
+
+// code help source: https://www.freecodecamp.org/news/use-firebase-authentication-in-a-react-app/

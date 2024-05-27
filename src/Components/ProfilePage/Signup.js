@@ -145,3 +145,6 @@ const Signup = () => {
 };
 
 export default Signup;
+
+//code help: https://mdbootstrap.com/docs/standard/extended/login/
+//https://medium.com/@Rushabh_/implementing-user-login-and-signup-with-reactjs-and-firebase-a-comprehensive-guide-7300bd33cb01

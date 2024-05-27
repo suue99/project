@@ -67,3 +67,4 @@ function ExerciseList() {
 }
 
 export default ExerciseList;
+//code help: https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js

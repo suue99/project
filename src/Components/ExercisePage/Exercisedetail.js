@@ -60,3 +60,5 @@ const ExerciseDetail = () => {
 };
 
 export default ExerciseDetail;
+
+//code help: https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js

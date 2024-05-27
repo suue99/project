@@ -17,3 +17,5 @@ import {
 
 
 export default Footer
+
+//code help: https://mdbootstrap.com/docs/standard/navigation/footer/

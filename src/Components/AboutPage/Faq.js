@@ -83,3 +83,5 @@ function Faq () {
 }
 
 export default Faq
+
+// code help https://react-bootstrap.netlify.app/docs/components/accordion/

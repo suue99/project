@@ -48,3 +48,5 @@ function Chat() {
 }
 
 export default Chat;
+
+//code assistance: https://www.freecodecamp.org/news/use-firebase-authentication-in-a-react-app/ and youtube
